@@ -1,0 +1,5 @@
+<linker>
+    <assembly fullname="SFramework.Core.Runtime" preserve="all" />
+    <assembly fullname="SFramework.ECS.Runtime" preserve="all" />
+    <assembly fullname="SFramework.UI.Runtime" preserve="all" />
+</linker>
