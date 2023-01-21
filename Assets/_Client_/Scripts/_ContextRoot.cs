@@ -12,7 +12,6 @@ namespace Client
 {
     public sealed class _ContextRoot : SFContextRoot
     {
-        private EcsWorld _world;
         private IEcsSystems _systems;
 
         protected override void PreInit()
@@ -30,7 +29,7 @@ namespace Client
 
         protected override void Init(ISFContainer container)
         {
-            _world = container.Resolve<ISFWorldsService>().Default;
+            var _world = container.Resolve<ISFWorldsService>().Default;
             _systems = new EcsSystems(_world, container);
             _systems
                 .Add(new WallsResizeSystem())
@@ -59,20 +58,8 @@ namespace Client
         {
             if (_systems != null)
             {
-                // list of custom worlds will be cleared
-                // during IEcsSystems.Destroy(). so, you
-                // need to save it here if you need.
                 _systems.Destroy();
                 _systems = null;
-            }
-
-            // cleanup custom worlds here.
-
-            // cleanup default world.
-            if (_world != null)
-            {
-                _world.Destroy();
-                _world = null;
             }
         }
     }

@@ -87,6 +87,13 @@
       "dependencies": {},
       "hash": "b597447dd8ba6074af5970fb29a75335c4b23f78"
     },
+    "sp.sframework.ecs.tweens": {
+      "version": "https://github.com/huran438/sf-ecs-tween.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "e5d2667c53bdbb082d1e35eddc0083d4c5396160"
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

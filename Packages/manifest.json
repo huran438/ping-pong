@@ -10,6 +10,7 @@
     "com.unity.ugui": "1.0.0",
     "sp.sframework.core": "https://github.com/huran438/sf-core.git",
     "sp.sframework.ecs": "https://github.com/huran438/sf-ecs.git",
+    "sp.sframework.ecs.tweens": "https://github.com/huran438/sf-ecs-tween.git",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
