@@ -5,21 +5,21 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "73efbfd9e6dd926f1350c248e3ce1350bf8b7ccc"
+      "hash": "b2b201084462b0d0891373a0649b7cefbc4ca3ea"
     },
     "com.leopotam.ecslite.di": {
       "version": "https://github.com/Leopotam/ecslite-di.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "a0d9700e58156319b8c933bb6dbab8d878c58283"
+      "hash": "7db3425156099e60f751a95bb344dee2c0692390"
     },
     "com.leopotam.ecslite.extendedsystems": {
       "version": "https://github.com/Leopotam/ecslite-extendedsystems.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2c8e0ba07ea9cb0605e25db453b5715ba98e6ebf"
+      "hash": "007a5af4aaa1c4993523232f306a5f02e1de7c0f"
     },
     "com.leopotam.ecslite.unityeditor": {
       "version": "https://github.com/Leopotam/ecslite-unityeditor.git",
@@ -73,6 +73,13 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "nl.elraccoone.tweens": {
+      "version": "git+https://github.com/jeffreylanters/unity-tweens",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "ab3515b3f578d0a24555363f201eedbc55f2b7f9"
+    },
     "sp.sframework.core": {
       "version": "https://github.com/huran438/sf-core.git",
       "depth": 0,
@@ -81,11 +88,10 @@
       "hash": "3f769924d767558d3a4ea566cd534cf3cc2d11af"
     },
     "sp.sframework.ecs": {
-      "version": "https://github.com/huran438/sf-ecs.git",
+      "version": "file:/Users/i.khurani/Documents/SFramework/ecs",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "b597447dd8ba6074af5970fb29a75335c4b23f78"
+      "source": "local",
+      "dependencies": {}
     },
     "sp.sframework.ecs.tweens": {
       "version": "https://github.com/huran438/sf-ecs-tween.git",
@@ -93,6 +99,13 @@
       "source": "git",
       "dependencies": {},
       "hash": "e5d2667c53bdbb082d1e35eddc0083d4c5396160"
+    },
+    "sp.sframework.ui": {
+      "version": "https://github.com/huran438/sf-ui.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "4890d6c781d034746dc6d3372501a3d9b58afb0c"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

@@ -8,26 +8,17 @@ namespace Client.Systems
 {
     public class PaddleDesktopControlSystem : SFECSSystem
     {
-        private readonly EcsFilterInject<Inc<Paddle, Direction, SmoothSpeed, TransformRef>, Exc<AI>> _filter;
+        private readonly EcsFilterInject<Inc<Paddle, Direction, TransformRef, Speed>, Exc<AI>> _filter;
 
         protected override void Tick(ref IEcsSystems systems)
         {
             if (Application.isMobilePlatform) return;
-            
+
             foreach (var entity in _filter.Value)
             {
                 ref var direction = ref _filter.Pools.Inc2.Get(entity);
-                ref var smoothSpeed = ref _filter.Pools.Inc3.Get(entity);
-                ref var transform = ref _filter.Pools.Inc4.Get(entity).value;
-
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    smoothSpeed.startTime = Time.time;
-                }
-                else if (Input.GetKeyDown(KeyCode.D))
-                {
-                    smoothSpeed.startTime = Time.time;
-                }
+                ref var paddleTransform = ref _filter.Pools.Inc3.Get(entity).value;
+                ref var speed = ref _filter.Pools.Inc4.Get(entity);
 
                 if (Input.GetKey(KeyCode.A))
                 {
@@ -41,11 +32,8 @@ namespace Client.Systems
                 {
                     direction.value = Vector3.zero;
                 }
-                
-                var elapsedTime = Time.time - smoothSpeed.startTime;
-                var t = Mathf.Clamp(elapsedTime / smoothSpeed.duration, 0.0f, 1.0f);
-                var speed = Mathf.Lerp(smoothSpeed.minValue, smoothSpeed.maxValue, t);
-                transform.position += direction.value * (speed * Time.deltaTime);
+
+                paddleTransform.position += direction.value * (speed.value * Time.deltaTime);
             }
         }
     }
