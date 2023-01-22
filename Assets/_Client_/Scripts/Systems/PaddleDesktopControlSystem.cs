@@ -33,7 +33,7 @@ namespace Client.Systems
                     direction.value = Vector3.zero;
                 }
 
-                paddleTransform.position += direction.value * (speed.value * Time.deltaTime);
+                paddleTransform.position += direction.value * (speed._value * Time.deltaTime);
             }
         }
     }

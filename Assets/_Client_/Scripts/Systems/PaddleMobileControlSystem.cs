@@ -10,6 +10,7 @@ namespace Client.Systems
     public class PaddleMobileControlSystem : SFECSSystem
     {
         private readonly EcsFilterInject<Inc<Paddle, Direction, TransformRef>, Exc<AI>> _filter;
+        private readonly EcsPoolInject<InputSpeed> _inputSpeedPool;
 
         protected override void Tick(ref IEcsSystems systems)
         {
@@ -37,6 +38,9 @@ namespace Client.Systems
                     {
                         transform.position = new Vector3(worldPosition.x, transform.position.y);
                     }
+                    
+                    _inputSpeedPool.Value.Add(entity).value = touch.deltaPosition.magnitude / touch.deltaTime;
+                    Debug.Log("Speed: " + touch.deltaPosition.magnitude / touch.deltaTime);
                 }
             }
         }

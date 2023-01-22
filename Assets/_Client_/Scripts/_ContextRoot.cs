@@ -4,6 +4,7 @@ using Client.Models;
 using Client.Systems;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
+using Leopotam.EcsLite.ExtendedSystems;
 using SFramework.Core.Runtime;
 using SFramework.ECS.Runtime;
 using SFramework.UI.Runtime;
@@ -57,6 +58,7 @@ namespace Client
 #if UNITY_EDITOR
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())
 #endif
+                .DelHere<InputSpeed>()
                 .Inject()
                 .Init();
         }

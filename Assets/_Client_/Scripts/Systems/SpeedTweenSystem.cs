@@ -22,7 +22,7 @@ namespace _Client_.Scripts._ECS.Systems
 
                 var t = Mathf.Clamp((to._elapsedTime - to.delay) / to.duration, 0.0f, 1.0f);
 
-                speed.value = SFMathFXHelper.CurvedValueECS(to.animationCurve,
+                speed._value = SFMathFXHelper.CurvedValueECS(to.animationCurve,
                     to.startValue,
                     to.endValue, t);
 
@@ -31,7 +31,7 @@ namespace _Client_.Scripts._ECS.Systems
                     switch (to.loopType)
                     {
                         case TweenLoopType.None:
-                            speed.value = to.endValue;
+                            speed._value = to.endValue;
                             _filter.Pools.Inc2.Del(entity);
                             break;
                         case TweenLoopType.Repeat:

@@ -3,6 +3,7 @@ using Client.Enum;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using SFramework.ECS.Runtime;
+using SFramework.ECS.Runtime.Tween;
 using UnityEngine;
 
 namespace Client.Systems
@@ -11,6 +12,7 @@ namespace Client.Systems
     {
         private readonly EcsFilterInject<Inc<Paddle, TransformRef, Direction, Speed, AI>> _filter;
         private readonly EcsFilterInject<Inc<Ball, TransformRef, Direction>> _ballsFilter;
+        private readonly EcsPoolInject<SpeedTween> _speedTweenPool;
 
         protected override void Tick(ref IEcsSystems systems)
         {
@@ -56,7 +58,22 @@ namespace Client.Systems
                         }
                     }
 
-                    paddleTransform.position += paddleDirection.value * (speed.value / 2f * Time.deltaTime);
+                    if (!_speedTweenPool.Value.Has(entity))
+                    {
+                        _speedTweenPool.Value.Add(entity) = new SpeedTween
+                        {
+                            delay = 0,
+                            duration = Random.Range(0f, 1f),
+                            loopType = TweenLoopType.None,
+                            animationCurve = TweenAnimationCurve.EaseInOut,
+                            startValue = 0f,
+                            endValue = speed.value
+                        };
+                    }
+
+                    paddleTransform.position += paddleDirection.value * (speed._value / 2f * Time.deltaTime);
+                    
+                   
                 }
             }
         }
