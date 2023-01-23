@@ -95,10 +95,11 @@
       "hash": "3f769924d767558d3a4ea566cd534cf3cc2d11af"
     },
     "sp.sframework.ecs": {
-      "version": "file:/Users/i.khurani/Documents/SFramework/ecs",
+      "version": "https://github.com/huran438/sf-ecs.git",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "b597447dd8ba6074af5970fb29a75335c4b23f78"
     },
     "sp.sframework.ecs.tweens": {
       "version": "https://github.com/huran438/sf-ecs-tween.git",

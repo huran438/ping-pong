@@ -11,7 +11,7 @@
     "com.unity.ugui": "1.0.0",
     "nl.elraccoone.tweens": "git+https://github.com/jeffreylanters/unity-tweens",
     "sp.sframework.core": "https://github.com/huran438/sf-core.git",
-    "sp.sframework.ecs": "file:/Users/i.khurani/Documents/SFramework/ecs",
+    "sp.sframework.ecs": "https://github.com/huran438/sf-ecs.git",
     "sp.sframework.ecs.tweens": "https://github.com/huran438/sf-ecs-tween.git",
     "sp.sframework.ui": "https://github.com/huran438/sf-ui.git",
     "com.unity.modules.ai": "1.0.0",
