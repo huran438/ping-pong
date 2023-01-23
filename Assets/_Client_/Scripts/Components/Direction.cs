@@ -2,7 +2,7 @@ using System;
 using SFramework.ECS.Runtime;
 using UnityEngine;
 
-namespace Client.Components
+namespace _Client_.Scripts.Components
 {
     [Serializable, SFGenerateComponent]
     public struct Direction : ISFComponent

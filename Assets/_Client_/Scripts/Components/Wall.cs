@@ -1,8 +1,8 @@
 using System;
-using Client.Enum;
+using _Client_.Scripts.Enums;
 using SFramework.ECS.Runtime;
 
-namespace Client.Components
+namespace _Client_.Scripts.Components
 {
     [Serializable, SFGenerateComponent]
     public struct Wall : ISFComponent

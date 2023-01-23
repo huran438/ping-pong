@@ -1,10 +1,10 @@
-using Client.Components;
+using _Client_.Scripts.Components;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using SFramework.ECS.Runtime;
 using UnityEngine;
 
-namespace Client.Systems
+namespace _Client_.Scripts.Systems
 {
     public class PaddleDesktopControlSystem : SFECSSystem
     {

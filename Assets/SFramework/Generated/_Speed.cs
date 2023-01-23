@@ -1,5 +1,5 @@
-﻿using SFramework.ECS.Runtime;
-using Client.Components;
+﻿using _Client_.Scripts.Components;
+using SFramework.ECS.Runtime;
 using UnityEngine;
 
 namespace SFramework.Generated

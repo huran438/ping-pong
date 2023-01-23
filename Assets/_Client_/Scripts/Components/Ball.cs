@@ -1,7 +1,7 @@
 using System;
 using SFramework.ECS.Runtime;
 
-namespace Client.Components
+namespace _Client_.Scripts.Components
 {
     [Serializable, SFGenerateComponent]
     public struct Ball : ISFComponent

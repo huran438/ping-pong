@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace _Client_.Scripts.Views.UI
+namespace _Client_.Scripts.Views
 {
     public class ButtonView : SFWidgetView
     {
@@ -30,11 +30,6 @@ namespace _Client_.Scripts.Views.UI
         {
             _colorTween?.Cancel();
             _colorTween = _image.TweenGraphicColor(_normalColor, _colorSwitchDuration).SetUseUnscaledTime(true);
-        }
-
-        protected override void PointerClick(PointerEventData eventData)
-        {
-            Debug.Log($"Button: {Widget} Clicked!\n" + eventData);
         }
     }
 }

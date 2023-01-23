@@ -1,7 +1,7 @@
-using _Client_.Scripts._ECS.Systems;
-using Client.Components;
-using Client.Models;
-using Client.Systems;
+using _Client_.Scripts.Components;
+using _Client_.Scripts.Models;
+using _Client_.Scripts.Services.Skins;
+using _Client_.Scripts.Systems;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using Leopotam.EcsLite.ExtendedSystems;
@@ -10,7 +10,7 @@ using SFramework.ECS.Runtime;
 using SFramework.UI.Runtime;
 using UnityEngine;
 
-namespace Client
+namespace _Client_.Scripts
 {
     public sealed class _ContextRoot : SFContextRoot
     {
@@ -33,10 +33,11 @@ namespace Client
                 if (data == null) continue;
                 container.Bind(data);
             }
-
+            
             container.Bind<ISFWorldsService>(new SFWorldsService());
-            container.Bind<SessionModel>(new SessionModel());
             container.Bind<ISFUIService>(new SFUIService());
+            container.Bind<ISkinsService>(new SkinsService());
+            container.Bind<SessionModel>(new SessionModel());
         }
 
         protected override void Init(ISFContainer container)
@@ -44,6 +45,7 @@ namespace Client
             var _world = container.Resolve<ISFWorldsService>().Default;
             _systems = new EcsSystems(_world, container);
             _systems
+                .Add(new GameStartSystem())
                 .Add(new WallsResizeSystem())
                 .Add(new PaddleAIControlSystem())
                 .Add(new PaddleDesktopControlSystem())
@@ -53,7 +55,8 @@ namespace Client
                 .Add(new SpeedTweenSystem())
                 .Add(new WallReflectionSystem())
                 .Add(new BallMovementSystem())
-                .Add(new ResetGameSystem())
+                .Add(new GoalCheckSystem())
+                .Add(new GameStopSystem())
 
 #if UNITY_EDITOR
                 .Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem())

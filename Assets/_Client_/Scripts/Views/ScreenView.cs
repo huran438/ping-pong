@@ -3,7 +3,7 @@ using ElRaccoone.Tweens.Core;
 using SFramework.UI.Runtime;
 using UnityEngine;
 
-namespace _Client_.Scripts.Views.UI
+namespace _Client_.Scripts.Views
 {
     [RequireComponent(typeof(CanvasGroup))]
     public class ScreenView : SFScreenView

@@ -1,11 +1,11 @@
-﻿using Client.Components;
+﻿using _Client_.Scripts.Components;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using SFramework.ECS.Runtime;
 using SFramework.ECS.Runtime.Tween;
 using UnityEngine;
 
-namespace _Client_.Scripts._ECS.Systems
+namespace _Client_.Scripts.Systems
 {
     public class SpeedTweenSystem : SFECSSystem
     {

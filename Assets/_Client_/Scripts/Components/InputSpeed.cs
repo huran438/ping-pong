@@ -1,6 +1,6 @@
 using SFramework.ECS.Runtime;
 
-namespace Client.Components
+namespace _Client_.Scripts.Components
 {
     public struct InputSpeed : ISFComponent
     {

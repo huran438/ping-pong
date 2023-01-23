@@ -1,4 +1,4 @@
-namespace Client.Enum
+namespace _Client_.Scripts.Enums
 {
     public enum WallType
     {

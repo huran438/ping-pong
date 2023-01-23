@@ -1,8 +1,7 @@
 using SFramework.ECS.Runtime;
 using SFramework.ECS.Runtime.Tween;
-using UnityEngine;
 
-namespace Client.Components
+namespace _Client_.Scripts.Components
 {
     
     public struct SpeedTween : ISFComponent

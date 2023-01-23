@@ -1,14 +1,15 @@
-using Client.Components;
-using Client.Models;
+using _Client_.Scripts.Components;
+using _Client_.Scripts.Enums;
+using _Client_.Scripts.Models;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using SFramework.Core.Runtime;
 using SFramework.ECS.Runtime;
 using UnityEngine;
 
-namespace Client.Systems
+namespace _Client_.Scripts.Systems
 {
-    public class ResetGameSystem : SFECSSystem
+    public class GoalCheckSystem : SFECSSystem
     {
         [SFInject]
         private readonly SessionModel _sessionModel;
@@ -28,16 +29,14 @@ namespace Client.Systems
 
                 if (viewPos.y < 0f)
                 {
-                    _sessionModel.PlayerTopScore += 1;
+                    _sessionModel .IncrementScore(PaddleType.Top);
                     transformRef.value.position = Vector3.zero;
-                    direction.value = Random.insideUnitCircle;
-
                     var angle = Random.Range(-45f, 45f);
                     direction.value = (Quaternion.Euler(0f, 0f, angle) * Vector3.up).normalized;
                 }
                 else if (viewPos.y > 1f)
                 {
-                    _sessionModel.PlayerBottomScore += 1;
+                    _sessionModel.IncrementScore(PaddleType.Bottom);
                     transformRef.value.position = Vector3.zero;
                     var angle = Random.Range(-45f, 45f);
                     direction.value = -(Quaternion.Euler(0f, 0f, angle) * Vector3.up).normalized;

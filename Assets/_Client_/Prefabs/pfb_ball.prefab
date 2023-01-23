@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2473126961861347522}
   - component: {fileID: 3572575721919027330}
   - component: {fileID: 3716672200158292796}
+  - component: {fileID: 653023940399160421}
   m_Layer: 3
   m_Name: pfb_ball
   m_TagString: Untagged
@@ -157,7 +158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _value:
-    value: 12
+    value: 10
+    _value: 0
 --- !u!114 &3716672200158292796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +173,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _value:
-    value: {x: 0.5, y: -0.5, z: 0}
+    value: {x: 0, y: 0, z: 0}
+--- !u!114 &653023940399160421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225105955829557930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e005db7f234aa4a65b8cdf0197e6b190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value:
+    value: {fileID: 4291604156851965620}
 --- !u!1 &7456652220168128517
 GameObject:
   m_ObjectHideFlags: 0

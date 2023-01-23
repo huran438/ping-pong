@@ -17,8 +17,11 @@ MonoBehaviour:
     _screenContainers:
     - _name: Main
       _widgetContainers:
-      - _name: Button/vs_ai
-      - _name: Button/vs_player
-    - _name: Skins
+      - _name: Button/Play
+    - _name: Game
       _widgetContainers:
-      - _name: Button/Back
+      - _name: Button/Pause
+    - _name: Pause
+      _widgetContainers:
+      - _name: Button/Resume
+      - _name: Button/Home

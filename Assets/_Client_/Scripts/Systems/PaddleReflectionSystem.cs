@@ -1,12 +1,12 @@
-using Client.Components;
-using Client.Enum;
+using _Client_.Scripts.Components;
+using _Client_.Scripts.Enums;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using SFramework.ECS.Runtime;
 using SFramework.ECS.Runtime.Tween;
 using UnityEngine;
 
-namespace Client.Systems
+namespace _Client_.Scripts.Systems
 {
     public class PaddleReflectionSystem : SFECSSystem
     {
